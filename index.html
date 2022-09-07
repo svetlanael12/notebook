@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="#" />
+    <!-- убрать при пуше!!!! -->
+    
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <title>Блокнот</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">
+                Заметки
+            </h1>
+        </header>
+        <main class="content">
+            <div class="card">
+                <div class="notes" id="notes">
+                    <div class="notes__list" id="notes__list">
+                        <!-- стандартный шаблон заметки -->
+    
+                        
+                        <!-- <div class="note">
+                            <button class="note__remove">&times;</button>
+                            <div class="note__title">
+                              
+                            </div>
+                            <p class="note__body"> 
+                                
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <button class="create-note" id="create-note">&#43;</button>
+        </footer>
+    </div>
+    
+    <article class="modal-note modal">
+        <section class="modal__section">
+            <div class="modal__container">
+                <div class="modal__header">
+                    <button class="modal__button_close">&times;</button>
+                    <input placeholder="Заголовок" class="modal__input_title" />
+                    <button class="modal__button_add">&#10003;</button>
+                </div>
+                <textarea placeholder="Введите текст (обязательно)" class="modal__input_body" maxlength="30" required></textarea>
+            </div>
+        </section>
+    </article>
+
+    <!-- <script src="./js/script.js"></script> -->
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+    font-size: 62.5%;
+    color: #000;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+  
+    min-height: 100vh;
+  }
+  
+  body::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
+    width: 100vw;
+    /* height: 100%; */
+    background-color: #5EC4CD;
+  
+    z-index: -1;
+  }
+  
+  .container {
+    position: relative;
+    max-width: 900px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .content {
+    margin-bottom: 90px;
+  }
+  
+  .header__title {
+    font-size: 4.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 5%; 
+  
+    font-size: 5rem;
+  }
+  
+  .create-note {
+    width: 70px;
+    height: 70px;
+  
+    background-color: #015C65;
+    border: none;
+    border-radius: 50%;
+  
+    color: #fff;
+  
+    cursor: pointer;
+  }
+  
+  .create-note:hover {
+    background-color: #015158;
+  }
+  
+  /* список закладок */
+  .notes__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .note {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  
+    background-color: rgba(255, 255, 255, 0.771);
+    /* border: 1px solid rgba(255, 255, 255, 0.771); */
+  
+    overflow: hidden;
+    border-radius: 4px;
+  
+    user-select: none; 
+    -ms-user-select: none; 
+      -moz-user-select: none; 
+      -webkit-user-select: none; 
+    cursor: pointer;
+  }
+  
+  .note:hover {
+    outline: 2px solid #015C65;
+  }
+  
+  .note:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(180deg, transparent, #daf1f3 50%);
+  }
+  
+  .note__remove {
+    width: 30px;
+    height: 30px;
+    color: red;
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+  
+    position: absolute;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
+  
+  .note__remove:hover {
+    background-color: #0000003e;
+  }
+  
+  .note__title {
+    width: 90%;
+    padding: 10px;
+  
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .note__body {
+    width: 90%;
+    padding: 0 10px;
+  
+    font-size: 1.4rem;
+    
+  }
+  
+  /* модальное окно */
+  
+  .modal-note {
+    display: none;
+    position: fixed;
+  
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  
+    background-color: rgba(0, 0, 0, 0.42);
+  }
+  
+  .modal__section {
+    margin-right: auto;
+    margin-left: auto;
+    
+    max-width: 700px;
+    max-height: 500px;
+  }
+  
+  .modal__container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .modal__header {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modal__button_add,
+  .modal__button_close {
+    width: 45px;
+    height: 45px;
+  
+    background-color: #dbf6f8;
+    border: none;
+    border-radius: 3px;
+  
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 700;
+  
+    cursor: pointer;
+  }
+  
+  .modal__button_add:hover,
+  .modal__button_close:hover {
+    background-color: #77ccd6;
+  }
+  
+  .modal__input_title {
+    font-size: 2rem;
+    width: 100%;
+    height: 30px;
+  
+    margin-left: 10px;
+    margin-right: 10px;
+  
+    padding: 20px;
+  }
+  
+  .modal__input_body {
+    
+  
+    min-width: 100%;
+    max-width: 100%;
+  
+    max-height: 450px;
+    min-height: 450px;
+  
+    padding: 20px;
+    font-size: 1.6rem;
+  }
+  
+  @media (max-width: 580px) {
+    .header__title {
+      text-align: center;
+    }
+  
+    .notes__list {
+      justify-content: center;
+    }
+  }
+  
+  
